@@ -1,0 +1,7 @@
+Flickr8k/
+Test/
+TrainedModels/
+Scripts/features.pkl
+Scripts/descriptions.pkl
+Scripts/word_index.pkl
+Scripts/__pycache__/
