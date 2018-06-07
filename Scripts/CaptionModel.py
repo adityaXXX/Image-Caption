@@ -7,8 +7,6 @@ from keras.layers import LSTM
 from keras.layers import Embedding
 from keras.layers import Dropout
 from keras.layers.merge import add
-# from keras.utils import to_categorical
-# from keras.utils import plot_model
 from keras.preprocessing.sequence import pad_sequences
 # from keras.callbacks import ModelCheckpoint
 import numpy as np
@@ -141,7 +139,6 @@ def createModel(maxLength, vocab_size):
     model.compile(loss='categorical_crossentropy', optimizer='adam')
 
     print(model.summary())
-    # plot_model(model, to_file = 'model.jpg', show_shapes = True)
     return model
 
 
