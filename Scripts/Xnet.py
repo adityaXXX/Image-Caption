@@ -25,6 +25,7 @@ model = ResNet50(weights='imagenet', include_top=False)
 
 
 features = {}
+c = 0
 for images in os.listdir(args["target"]):
     filename = args["target"] + '/' + images
     image = load_img(filename, target_size = inputShape)
@@ -34,7 +35,8 @@ for images in os.listdir(args["target"]):
     pred = model.predict(image)
     image_id = images.split('.')[0]
     features[image_id] = pred
-    print('>{}'.format(images))
+    print('>{}, count = {}'.format(images, c))
+    c += 1
 
 
 pickle.dump(features, open('features.pkl', 'wb'))
