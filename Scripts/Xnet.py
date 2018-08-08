@@ -30,9 +30,9 @@ for images in os.listdir(args["target"]):
     filename = args["target"] + '/' + images
     image = load_img(filename, target_size = inputShape)
     image = img_to_array(image)
-    image = np.expand_dims(image, axis = 0)
-    image = preprocess(image)
-    pred = model.predict(image)
+    image = np.expand_dims(image, axis = 0) # image.shape = (1, 224, 224, 3)
+    image = preprocess(image) # image.shape = (1, 224, 224, 3)
+    pred = model.predict(image) # pred.shape = (1, 1, 1, 2048)
     image_id = images.split('.')[0]
     features[image_id] = pred
     print('>{}, count = {}'.format(images, c))
