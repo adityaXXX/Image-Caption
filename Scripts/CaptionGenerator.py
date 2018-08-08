@@ -141,8 +141,6 @@ text1.image_create(END, image=photo)
 text1.pack(side=TOP)
 
 text2 = Text(root, height=20, width=100)
-scroll = Scrollbar(root, command=text2.yview)
-text2.configure(yscrollcommand=scroll.set)
 text2.tag_configure('bold_italics', font=('Arial', 12, 'bold', 'italic'))
 text2.tag_configure('big', font=('Verdana', 20, 'bold'))
 text2.tag_configure('color', foreground='#476042',
@@ -151,6 +149,5 @@ text2.insert(END,'\nCaption\n', 'big')
 quote = caption
 text2.insert(END, quote, 'color')
 text2.pack(side=BOTTOM)
-scroll.pack(side=RIGHT, fill=Y)
 
 root.mainloop()
