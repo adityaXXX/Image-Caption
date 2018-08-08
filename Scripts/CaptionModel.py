@@ -165,8 +165,8 @@ print("Max Length:- {}".format(MaxLength))
 # X1train, X2train, ytrain = createData(tokenizerTrain, trainPhoto, trainData, MaxLength)
 
 
-# testData = train_test_data('../Flickr_8k.devImages.txt')
-# testPhoto = extractPhotoFeatures('../Flickr_8k.devImages.txt')
+# testData = train_test_data('../Flickr8k/Flickr_8k.devImages.txt')
+# testPhoto = extractPhotoFeatures('../Flickr8k/Flickr_8k.devImages.txt')
 # X1test, X2test, ytest = createData(tokenizerTrain, testPhoto, testData, MaxLength)
 
 
